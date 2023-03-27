@@ -1,15 +1,9 @@
 var express = require('express');
-const homePageController = require('../controllers/homePageController');
+const controllerHomePage = require('../controllers/controllerHomePage');
 var router = express.Router();
 
-router.get('/api/', homePageController.homeProductsMasc)
-router.get('/api/womanproducts', homePageController.homeProductsFem)
-
-
-
-
-
-
+router.get('/api/', controllerHomePage.homeProductsMasc)
+router.get('/api/womanproducts', controllerHomePage.homeProductsFem)
 
 
 

@@ -4,7 +4,9 @@ const {sequelize, Produto} = require('../models')
 
 const homePageController = {
     homeProductsMasc: async (req,res)=>{
-        const produtosMasc = await Produto.findAll({limit:3})
+        const produtosMasc = await Produto.findAll({
+            limit:3
+        })
 
         return res.status(200).json(produtosMasc)
     },
